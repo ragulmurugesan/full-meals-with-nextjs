@@ -1,6 +1,7 @@
 import Link from "next/link";
 import LogoImg from "@/assets/logo.png";
-import classes from "@/components/main-header.module.css";
+import classes from "@/components/header/main-header.module.css";
+import NavLink from "./nav-link";
 
 export default function MainHeader() {
     return (
@@ -11,12 +12,13 @@ export default function MainHeader() {
             <nav>
                 <ul>
                     <li>
-                        <Link href="/meals">Browse Meals</Link>
-                        { /** For client side component you can use useRouter to handle navigation */ }
+                        <NavLink href="/meals" name="Browse Meals" />
+                        { /** For client side component you can use useRouter to handle navigation */}
                         {/* <a onClick={() => router.push("meals")}>Browse Meals</a> */}
                     </li>
                     <li>
-                        <Link href="/community">Foodies Community</Link>
+                        {/* <Link href="/community"></Link> */}
+                        <NavLink href="/community" name="Foodies Community" />
                     </li>
                 </ul>
             </nav>
