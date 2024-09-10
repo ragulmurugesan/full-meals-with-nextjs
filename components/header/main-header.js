@@ -5,11 +5,11 @@ import NavLink from "./nav-link";
 
 export default function MainHeader() {
     return (
-        <header>
+        <header className={ classes.header }>
             <Link href="/" className={classes.logo}>
                 <img src={LogoImg.src} />
             </Link>
-            <nav>
+            <nav className={ classes.nav }>
                 <ul>
                     <li>
                         <NavLink href="/meals" name="Browse Meals" />
